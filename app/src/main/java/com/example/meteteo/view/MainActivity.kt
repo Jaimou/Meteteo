@@ -1,6 +1,13 @@
 package com.example.meteteo.view
 
 import android.annotation.SuppressLint
+import android.app.Activity
+import android.content.Context
+import android.content.pm.PackageManager
+import android.location.Geocoder
+import android.location.Location
+import android.location.LocationListener
+import android.location.LocationManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
@@ -8,6 +15,8 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_NO
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
 import com.example.meteteo.R
 import com.example.meteteo.database.CityRoomDatabase
@@ -44,7 +53,40 @@ class MainActivity : AppCompatActivity() {
             repository.insert(WeatherCityEntity("Test"))
         }
 
-        // Retrofit Create instance and Get Request
+        fun getGPSLocation(context: Context): List<Double> {
+            val locationManager = context.getSystemService(Context.LOCATION_SERVICE) as LocationManager
+            val locationPermissionCode = 1 // Define your permission code here
+            var latitude = 44.86
+            var longitude = -0.57
+
+            if (ContextCompat.checkSelfPermission(context, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(context as Activity, arrayOf(android.Manifest.permission.ACCESS_COARSE_LOCATION), locationPermissionCode)
+            } else {
+                locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 5000, 5f, object :
+                    LocationListener {
+                    override fun onLocationChanged(location: Location) {
+                        // update latitude and longitude values when location changes
+                        latitude = location.latitude
+                        longitude = location.longitude
+                        locationManager.removeUpdates(this)
+                    }
+                    override fun onProviderEnabled(provider: String) {}
+                    override fun onProviderDisabled(provider: String) {}
+                    override fun onStatusChanged(provider: String?, status: Int, extras: Bundle?) {}
+                })
+                val lastKnownLocation = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER)
+                if (lastKnownLocation != null) {
+                    latitude = lastKnownLocation.latitude
+                    longitude = lastKnownLocation.longitude
+                }
+            }
+            return listOf(latitude, longitude)
+        }
+
+        val latitude: Double = getGPSLocation(this)[0]
+        val longitude: Double = getGPSLocation(this)[1]
+        val geocoder = Geocoder(this)
+        val list = geocoder.getFromLocation(latitude, longitude, 1)
 
         // Il faut utiliser un ViewModel pour faire le call api
         val retrofitBuilder = RetrofitBuilder.apiService
@@ -54,9 +96,10 @@ class MainActivity : AppCompatActivity() {
                 try {
                     if (responseWeather.isSuccessful) {
                         println("CALL API : ${responseWeather.body()}")
-                        // À changer car ça affiche le timezone et non la ville
-                        findViewById<TextView>(R.id.city_name).text = "${responseWeather.body()?.timezone}"
-                        // Il manque le weather code pour afficher l'image
+                        // Affichage du nom de la ville
+                        findViewById<TextView>(R.id.city_name).text = list?.get(0)?.locality
+
+                        // Affichage de la température actuelle
                         findViewById<TextView>(R.id.current_degree).text = "${responseWeather.body()?.current_weather?.temperature}°"
 
                         val inputPattern = "yyyy-MM-dd'T'HH:mm"
@@ -67,11 +110,13 @@ class MainActivity : AppCompatActivity() {
                         val outputDate = outputFormatter.format(inputDate)
                         findViewById<TextView>(R.id.current_date).text = outputDate
 
+                        // Affichage de la précipitation
                         for (i in 0..23) {
                             val precipitation = findViewById<TextView>(resources.getIdentifier("precipitation", "id", packageName))
                             precipitation.text = "${responseWeather.body()?.hourly?.precipitationProbability?.get(i)}%"
                         }
 
+                        // Affichage de l'humidité
                         for (i in 0..23) {
                             val humidity = findViewById<TextView>(resources.getIdentifier("humidity", "id", packageName))
                             humidity.text = "${responseWeather.body()?.hourly?.relativeHumidity?.get(i)}%"
