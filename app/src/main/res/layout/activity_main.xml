@@ -1,0 +1,1344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#331972"
+    tools:context=".view.MainActivity">
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.25"
+        android:background="@drawable/nuage"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/city_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/poppins"
+            android:text="@string/city_name"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/image24"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"/>
+
+        <TextView
+            android:id="@+id/current_degree"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_marginTop="-15dp"
+            android:layout_gravity="center"
+            android:fontFamily="@font/poppins"
+            android:text="@string/current_degree"
+            android:textColor="#FFFFFF"
+            android:textSize="60sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/current_date"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:layout_gravity="center"
+            android:fontFamily="@font/poppins"
+            android:text="@string/day"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/rectangle" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:paddingRight="10dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="17dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/umbrella" />
+
+                    <TextView
+                        android:id="@+id/precipitation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="18dp"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="@font/poppins"
+                        android:textColor="#FFFFFF"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="@string/precipitation_text"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="17dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/goutte" />
+
+                    <TextView
+                        android:id="@+id/humidity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="18dp"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="@font/poppins"
+                        android:textColor="#FFFFFF"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="@string/humidite_text"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="17dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/wind" />
+
+                    <TextView
+                        android:id="@+id/wind_speed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="18dp"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="@string/wind"
+                        android:textColor="#FFFFFF"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="@string/wind_text"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/today"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/forecast"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="10dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/rectangle_vertical" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:id="@+id/textView11"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/hour0"
+                                android:textColor="#FFFFFF"
+                                android:textSize="13sp" />
+
+                            <ImageView
+                                android:id="@+id/image0"
+                                android:layout_width="37dp"
+                                android:layout_height="30dp"/>
+
+                            <TextView
+                                android:id="@+id/temp0"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/degree0"
+                                android:textColor="#FFFFFF"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/rectangle_vertical" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:id="@+id/textView13"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/hour1"
+                                android:textColor="#FFFFFF"
+                                android:textSize="13sp" />
+
+                            <ImageView
+                                android:id="@+id/image1"
+                                android:layout_width="37dp"
+                                android:layout_height="30dp"/>
+
+                            <TextView
+                                android:id="@+id/temp1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/degree1"
+                                android:textColor="#FFFFFF"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/rectangle_vertical" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:id="@+id/textView15"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/hour2"
+                                android:textColor="#FFFFFF"
+                                android:textSize="13sp" />
+
+                            <ImageView
+                                android:id="@+id/image2"
+                                android:layout_width="37dp"
+                                android:layout_height="30dp"/>
+
+                            <TextView
+                                android:id="@+id/temp2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/degree2"
+                                android:textColor="#FFFFFF"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/rectangle_vertical" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:id="@+id/textView17"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/hour3"
+                                android:textColor="#FFFFFF"
+                                android:textSize="13sp" />
+
+                            <ImageView
+                                android:id="@+id/image3"
+                                android:layout_width="37dp"
+                                android:layout_height="30dp"/>
+
+                            <TextView
+                                android:id="@+id/temp3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/degree3"
+                                android:textColor="#FFFFFF"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/rectangle_vertical" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:id="@+id/textView19"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/hour4"
+                                android:textColor="#FFFFFF"
+                                android:textSize="13sp" />
+
+                            <ImageView
+                                android:id="@+id/image4"
+                                android:layout_width="37dp"
+                                android:layout_height="30dp"/>
+
+                            <TextView
+                                android:id="@+id/temp4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/degree4"
+                                android:textColor="#FFFFFF"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/rectangle_vertical" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:id="@+id/textView20"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/hour5"
+                                android:textColor="#FFFFFF"
+                                android:textSize="13sp" />
+
+                            <ImageView
+                                android:id="@+id/image5"
+                                android:layout_width="37dp"
+                                android:layout_height="30dp"/>
+
+                            <TextView
+                                android:id="@+id/temp5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/degree5"
+                                android:textColor="#FFFFFF"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/rectangle_vertical" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:id="@+id/textView21"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/hour6"
+                                android:textColor="#FFFFFF"
+                                android:textSize="13sp" />
+
+                            <ImageView
+                                android:id="@+id/image6"
+                                android:layout_width="37dp"
+                                android:layout_height="30dp"/>
+
+                            <TextView
+                                android:id="@+id/temp6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/degree6"
+                                android:textColor="#FFFFFF"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/rectangle_vertical" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:id="@+id/textView22"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/hour7"
+                                android:textColor="#FFFFFF"
+                                android:textSize="13sp" />
+
+                            <ImageView
+                                android:id="@+id/image7"
+                                android:layout_width="37dp"
+                                android:layout_height="30dp"/>
+
+                            <TextView
+                                android:id="@+id/temp7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/degree7"
+                                android:textColor="#FFFFFF"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/rectangle_vertical" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:id="@+id/textView23"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/hour8"
+                                android:textColor="#FFFFFF"
+                                android:textSize="13sp" />
+
+                            <ImageView
+                                android:id="@+id/image8"
+                                android:layout_width="37dp"
+                                android:layout_height="30dp"/>
+
+                            <TextView
+                                android:id="@+id/temp8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/degree8"
+                                android:textColor="#FFFFFF"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/rectangle_vertical" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:id="@+id/textView24"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/hour9"
+                                android:textColor="#FFFFFF"
+                                android:textSize="13sp" />
+
+                            <ImageView
+                                android:id="@+id/image9"
+                                android:layout_width="37dp"
+                                android:layout_height="30dp"/>
+
+                            <TextView
+                                android:id="@+id/temp9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/degree9"
+                                android:textColor="#FFFFFF"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/rectangle_vertical" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:id="@+id/textView25"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/hour10"
+                                android:textColor="#FFFFFF"
+                                android:textSize="13sp" />
+
+                            <ImageView
+                                android:id="@+id/image10"
+                                android:layout_width="37dp"
+                                android:layout_height="30dp"/>
+
+                            <TextView
+                                android:id="@+id/temp10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/degree10"
+                                android:textColor="#FFFFFF"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/rectangle_vertical" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:id="@+id/textView26"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/hour11"
+                                android:textColor="#FFFFFF"
+                                android:textSize="13sp" />
+
+                            <ImageView
+                                android:id="@+id/image11"
+                                android:layout_width="37dp"
+                                android:layout_height="30dp"/>
+
+                            <TextView
+                                android:id="@+id/temp11"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/degree11"
+                                android:textColor="#FFFFFF"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/rectangle_vertical" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:id="@+id/textView27"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/hour12"
+                                android:textColor="#FFFFFF"
+                                android:textSize="13sp" />
+
+                            <ImageView
+                                android:id="@+id/image12"
+                                android:layout_width="37dp"
+                                android:layout_height="30dp"/>
+
+                            <TextView
+                                android:id="@+id/temp12"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/degree12"
+                                android:textColor="#FFFFFF"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/rectangle_vertical" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:id="@+id/textView28"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/hour13"
+                                android:textColor="#FFFFFF"
+                                android:textSize="13sp" />
+
+                            <ImageView
+                                android:id="@+id/image13"
+                                android:layout_width="37dp"
+                                android:layout_height="30dp"/>
+
+                            <TextView
+                                android:id="@+id/temp13"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/degree13"
+                                android:textColor="#FFFFFF"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/rectangle_vertical" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:id="@+id/textView29"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/hour14"
+                                android:textColor="#FFFFFF"
+                                android:textSize="13sp" />
+
+                            <ImageView
+                                android:id="@+id/image14"
+                                android:layout_width="37dp"
+                                android:layout_height="30dp"/>
+
+                            <TextView
+                                android:id="@+id/temp14"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/degree14"
+                                android:textColor="#FFFFFF"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/rectangle_vertical" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:id="@+id/textView30"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/hour15"
+                                android:textColor="#FFFFFF"
+                                android:textSize="13sp" />
+
+                            <ImageView
+                                android:id="@+id/image15"
+                                android:layout_width="37dp"
+                                android:layout_height="30dp"/>
+
+                            <TextView
+                                android:id="@+id/temp15"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/degree15"
+                                android:textColor="#FFFFFF"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/rectangle_vertical" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:id="@+id/textView31"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/hour16"
+                                android:textColor="#FFFFFF"
+                                android:textSize="13sp" />
+
+                            <ImageView
+                                android:id="@+id/image16"
+                                android:layout_width="37dp"
+                                android:layout_height="30dp"/>
+
+                            <TextView
+                                android:id="@+id/temp16"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/degree16"
+                                android:textColor="#FFFFFF"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/rectangle_vertical" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:id="@+id/textView32"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/hour17"
+                                android:textColor="#FFFFFF"
+                                android:textSize="13sp" />
+
+                            <ImageView
+                                android:id="@+id/image17"
+                                android:layout_width="37dp"
+                                android:layout_height="30dp"/>
+
+                            <TextView
+                                android:id="@+id/temp17"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/degree17"
+                                android:textColor="#FFFFFF"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/rectangle_vertical" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:id="@+id/textView33"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/hour18"
+                                android:textColor="#FFFFFF"
+                                android:textSize="13sp" />
+
+                            <ImageView
+                                android:id="@+id/image18"
+                                android:layout_width="37dp"
+                                android:layout_height="30dp"/>
+
+                            <TextView
+                                android:id="@+id/temp18"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/degree18"
+                                android:textColor="#FFFFFF"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/rectangle_vertical" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:id="@+id/textView34"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/hour19"
+                                android:textColor="#FFFFFF"
+                                android:textSize="13sp" />
+
+                            <ImageView
+                                android:id="@+id/image19"
+                                android:layout_width="37dp"
+                                android:layout_height="30dp"/>
+
+                            <TextView
+                                android:id="@+id/temp19"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/degree19"
+                                android:textColor="#FFFFFF"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/rectangle_vertical" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:id="@+id/textView35"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/hour20"
+                                android:textColor="#FFFFFF"
+                                android:textSize="13sp" />
+
+                            <ImageView
+                                android:id="@+id/image20"
+                                android:layout_width="37dp"
+                                android:layout_height="30dp"/>
+
+                            <TextView
+                                android:id="@+id/temp20"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/degree20"
+                                android:textColor="#FFFFFF"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/rectangle_vertical" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:id="@+id/textView36"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/hour21"
+                                android:textColor="#FFFFFF"
+                                android:textSize="13sp" />
+
+                            <ImageView
+                                android:id="@+id/image21"
+                                android:layout_width="37dp"
+                                android:layout_height="30dp"/>
+
+                            <TextView
+                                android:id="@+id/temp21"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/degree21"
+                                android:textColor="#FFFFFF"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/rectangle_vertical" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:id="@+id/textView37"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/hour22"
+                                android:textColor="#FFFFFF"
+                                android:textSize="13sp" />
+
+                            <ImageView
+                                android:id="@+id/image22"
+                                android:layout_width="37dp"
+                                android:layout_height="30dp"/>
+
+                            <TextView
+                                android:id="@+id/temp22"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/degree22"
+                                android:textColor="#FFFFFF"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/rectangle_vertical" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:id="@+id/textView38"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/hour23"
+                                android:textColor="#FFFFFF"
+                                android:textSize="13sp" />
+
+                            <ImageView
+                                android:id="@+id/image23"
+                                android:layout_width="37dp"
+                                android:layout_height="30dp"/>
+
+                            <TextView
+                                android:id="@+id/temp23"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/degree23"
+                                android:textColor="#FFFFFF"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
