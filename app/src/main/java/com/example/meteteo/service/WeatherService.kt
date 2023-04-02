@@ -15,6 +15,6 @@ interface WeatherService {
         @Query("timezone") timezone: String = "Europe/Berlin",
         @Query("current_weather") current_weather: String = "true",
         @Query("hourly") hourly: String = "temperature_2m,precipitation_probability,weathercode,relativehumidity_2m",
-        @Query("daily") daily: String = "weathercode,temperature_2m_max,temperature_2m_min,apparent_temperature_max,apparent_temperature_min"
+        @Query("daily") daily: String = "weathercode,temperature_2m_max,temperature_2m_min"
     ): Response<Weather>
 }

@@ -3,6 +3,7 @@ package com.example.meteteo.view
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Context
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.location.Geocoder
 import android.location.Location
@@ -13,8 +14,6 @@ import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatDelegate
-import androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_NO
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
@@ -40,7 +39,12 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        AppCompatDelegate.setDefaultNightMode(MODE_NIGHT_NO)
+        val textView = findViewById<TextView>(R.id.forecast)
+
+        textView.setOnClickListener {
+            val intent = Intent(this, Forecast::class.java)
+            startActivity(intent)
+        }
 
         weatherViewModel = ViewModelProvider(this)[WeatherViewModel::class.java]
 

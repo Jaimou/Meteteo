@@ -204,7 +204,7 @@
                 android:textSize="12sp" />
 
             <TextView
-                android:id="@+id/textView10"
+                android:id="@+id/forecast"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="100dp"
@@ -212,7 +212,8 @@
                 android:fontFamily="@font/poppins_medium"
                 android:text="@string/forecast"
                 android:textColor="#FFFFFF"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                android:clickable="true"/>
         </LinearLayout>
 
         <LinearLayout

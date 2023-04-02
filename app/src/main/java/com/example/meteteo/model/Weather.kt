@@ -30,7 +30,5 @@ data class HourlyData(
 data class DailyData(
     @SerializedName("weathercode") val weatherCode: List<Int>,
     @SerializedName("temperature_2m_max") val maxTemperature: List<Float>,
-    @SerializedName("temperature_2m_min") val minTemperature: List<Float>,
-    @SerializedName("apparent_temperature_max") val maxApparentTemperature: List<Float>,
-    @SerializedName("apparent_temperature_min") val minApparentTemperature: List<Float>
+    @SerializedName("temperature_2m_min") val minTemperature: List<Float>
 )
